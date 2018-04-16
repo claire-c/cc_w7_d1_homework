@@ -25,11 +25,18 @@ public class Rollercoaster extends Attraction implements IChargeable, IRestricta
         return cost;
     }
 
-    public boolean isAllowedTo(Visitor visitor){
-        if(visitor.getAge() <= 12 && visitor.getHeight() <= 145){
+
+
+    public boolean isAllowedTo(Visitor visitor) {
+        if (visitor.getAge() <= 12) {
             return false;
-        }else{
-            return true;
+        } else {
+            if (visitor.getHeight() <= 145) {
+                return false;
+            } else {
+                return true;
+            }
+
         }
     }
 

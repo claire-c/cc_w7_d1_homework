@@ -6,6 +6,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class RollercoasterTest {
 
@@ -42,15 +44,24 @@ public class RollercoasterTest {
         assertEquals(3.5, rollercoaster.priceFor(youngVisitor), 0.1);
     }
 
-//    @Test
-//    public void cannotGetPriceForVisitorTooYoung(){
-//
-//    }
-//
-//    @Test
-//    public void cannotGetPriceForVisitorTooShort(){
-//
-//    }
+    @Test
+    public void visitorIsAllowedToRide(){
+        assertTrue(rollercoaster.isAllowedTo(tallVisitor));
+        assertTrue(rollercoaster.isAllowedTo(oldVisitor));
+
+    }
+
+    @Test
+    public void visitorCannotRideTooYoung(){
+        assertFalse(rollercoaster.isAllowedTo(youngVisitor));
+        assertFalse(rollercoaster.isAllowedTo(youngVisitor2));
+    }
+
+    @Test
+    public void visitorCannotRideTooShort(){
+        assertFalse(rollercoaster.isAllowedTo(shortVisitor));
+    }
+
 
 
 
