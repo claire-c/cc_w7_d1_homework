@@ -26,7 +26,6 @@ public class Rollercoaster extends Attraction implements IChargeable, IRestricta
     }
 
 
-
     public boolean isAllowedTo(Visitor visitor) {
         if (visitor.getAge() <= 12) {
             return false;
