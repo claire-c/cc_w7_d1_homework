@@ -16,8 +16,18 @@ public class VisitorTest {
     }
 
     @Test
-    public void getAge(){
+    public void canGetAge(){
         assertEquals(15, visitor.getAge());
+    }
+
+    @Test
+    public void canGetHeight(){
+        assertEquals(150, visitor.getHeight());
+    }
+
+    @Test
+    public void canGetMoney(){
+        assertEquals(25.0, visitor.getMoney(), 0.1);
     }
 
 
