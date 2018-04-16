@@ -33,7 +33,7 @@ public abstract class Stall implements IEnjoyable, IChargeable {
         return this.funRating;
     }
 
-    
+
 
 
 }

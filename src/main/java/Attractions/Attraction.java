@@ -12,5 +12,13 @@ public abstract class Attraction implements IEnjoyable {
         this.funRating = funRating;
     }
 
+    public String getName(){
+        return this.name;
+    }
+
+    public int getFunRating(){
+        return this.funRating;
+    }
+
 
 }
